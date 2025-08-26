@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBS Web Viewer</title>
+</head>
+<body>
+    <h1>NBS Web Viewer</h1>
+    <h3>Upload .nbs file</h3>
+    <input type="file" id="input_songFile" accept=".nbs">
+
+    <p id="test"></p>
+    <div id="fileInfo" style="visibility: hidden;">
+        <h2>File Information</h2>
+        <p id="fileName"></p>
+        <p id="fileSize"></p>
+        <p id="fileType"></p>
+    </div>
+    <div id="songInfo" style="visibility: hidden;">
+        <h2>Part 1: Header</h2>
+        <p>The header contains information about the file, all the data must be in the following order:</p>
+        <table>
+            <tr>
+                <th>Value</th>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Version</td>
+                <td>The version of the NBS format.</td>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td>The author of the song.</td>
+            </tr>
+            <tr>
+                <td>Song Name</td>
+                <td>The name of the song.</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@encode42/nbs.js@2.0.2/dist/umd.js"></script>
+<script src="index.js"></script>
+</html>
